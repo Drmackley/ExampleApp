@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:id="@+id/fullLayout">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/charName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/editbox_background_normal"
+        android:textSize="48sp"
+        android:editable="false"
+        android:text="placehold"
+        android:inputType="textNoSuggestions" />
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/classesSpinner"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/charName"
+        android:padding="5dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/raceSpinner"
+        android:layout_alignParentTop="false"
+        android:layout_toEndOf="@+id/charName"
+        android:layout_below="@+id/classesSpinner"
+        android:padding="5dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/alignSpinner"
+        android:layout_alignParentTop="false"
+        android:layout_toEndOf="@+id/charName"
+        android:layout_below="@+id/raceSpinner"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/charName"
+        android:id="@+id/acinitspeed"
+        android:backgroundTintMode="multiply">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/armorclass"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:inputType="number"
+            android:hint="AC" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/initiative"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:inputType="numberSigned"
+            android:hint="Initiative"
+            android:numeric="signed" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/speed"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:hint="Speed" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/basemodifier"
+        android:backgroundTintMode="multiply"
+        android:layout_below="@+id/acinitspeed">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STR"
+            android:id="@+id/strmod"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:numeric="signed"
+            android:inputType="numberSigned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEX"
+            android:id="@+id/dexmod"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:numeric="signed"
+            android:inputType="numberSigned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CON"
+            android:id="@+id/conmod"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:numeric="signed"
+            android:inputType="numberSigned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INT"
+            android:id="@+id/intmod"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:numeric="signed"
+            android:inputType="numberSigned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WIS"
+            android:id="@+id/wismod"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:numeric="signed"
+            android:inputType="numberSigned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHA"
+            android:id="@+id/chamod"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:numeric="signed"
+            android:inputType="numberSigned" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/basestats"
+        android:backgroundTintMode="multiply"
+        android:layout_below="@+id/basemodifier" >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/strstat"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:inputType="numberSigned"
+            android:hint="STR" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dexstat"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:inputType="numberSigned"
+            android:hint="DEX" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/constat"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:inputType="numberSigned"
+            android:hint="CON" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/intstat"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:inputType="numberSigned"
+            android:hint="INT" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wisstat"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:inputType="numberSigned"
+            android:hint="WIS" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chastat"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:inputType="numberSigned"
+            android:hint="CHA" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/basestats"
+        android:id="@+id/hp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/button"
+            android:layout_weight="1"
+            style="@android:style/Widget.Button.Inset"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_weight="5"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/button"
+            android:layout_toLeftOf="@+id/button2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/textView2"
+            android:layout_toRightOf="@+id/button"
+            android:layout_toLeftOf="@+id/button2"
+            android:layout_below="@+id/progressBar"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/button2"
+            android:layout_weight="1"
+            style="@android:style/Widget.Button.Inset"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignWithParentIfMissing="false" />
+    </RelativeLayout>
+
+</RelativeLayout>
